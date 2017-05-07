@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_picker_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.PickerViewActivity">
+
+
+    <com.cnh.bluetooth.widget.PickerView
+        android:layout_width="80dp"
+        android:id="@+id/pickerview"
+        android:layout_height="120dp" />
+
+    <com.cnh.bluetooth.widget.PickerView
+        android:layout_width="80dp"
+        android:id="@+id/pickerview1"
+        android:layout_height="120dp" />
+
+    <com.cnh.bluetooth.widget.PickerView
+        android:layout_width="80dp"
+        android:id="@+id/pickerview2"
+        android:layout_height="120dp" />
+
+</LinearLayout>
