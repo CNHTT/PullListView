@@ -17,11 +17,7 @@
 
         <activity android:name=".view.activity.GoodsActivity"></activity>
 
-        <activity android:name=".view.activity.NotificationActivity"><intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+        <activity android:name=".view.activity.NotificationActivity"></activity>
 
         <activity android:name=".view.activity.PhotoActivity"></activity>
 
@@ -30,7 +26,11 @@
 
         <activity android:name=".view.activity.PullToZoomListViewActivity"></activity>
 
-        <activity android:name=".view.activity.FadingScrollViewActivity">  </activity>
+        <activity android:name=".view.activity.FadingScrollViewActivity"> <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter> </activity>
 
     </application>
 
