@@ -8,3 +8,4 @@
 
     下拉上拉刷新
 
+! [ video ]( https://github.com/CNHTT/PullListView/blob/master/appimage/device-2017-05-08-113755.mp4)
