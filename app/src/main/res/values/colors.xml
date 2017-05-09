@@ -44,7 +44,7 @@
     <color name="outside_color_gray">#66444444</color>
     <color name="outside_color_pink">#6657616B</color>
     <color name="transparent1">#9000</color>
-
+    <color name="colorGray">#33000000</color>
     <color name="blue">#ee0000c6</color>
     <color name="dark_red">#ffcc0000</color>
     <color name="product_odd_row">#ffffffff</color>

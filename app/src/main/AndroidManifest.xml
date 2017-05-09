@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cnh.bluetooth">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
     <application
         android:name=".BlueApplication"
         android:allowBackup="true"
@@ -9,29 +13,23 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".view.SplashActivity" />
-        <activity android:name=".view.activity.LoginActivity"></activity>
-
-        <activity android:name=".view.activity.GoodsActivity"></activity>
-
-        <activity android:name=".view.activity.NotificationActivity"></activity>
-
-        <activity android:name=".view.activity.PhotoActivity"></activity>
-
-        <activity android:name=".view.activity.PickerViewActivity"></activity>、
-
-
-        <activity android:name=".view.activity.PullToZoomListViewActivity"></activity>
-
-        <activity android:name=".view.activity.FadingScrollViewActivity"> <intent-filter>
+        <activity android:name=".MainActivity"><intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter> </activity>
+        </intent-filter></activity>
+        <activity android:name=".view.SplashActivity" />
+        <activity android:name=".view.activity.LoginActivity" />
+        <activity android:name=".view.activity.GoodsActivity" />
+        <activity android:name=".view.activity.NotificationActivity" />
+        <activity android:name=".view.activity.PhotoActivity" />
+        <activity android:name=".view.activity.PickerViewActivity" />
+        、
+        <activity android:name=".view.activity.PullToZoomListViewActivity" />
+        <activity android:name=".view.activity.FadingScrollViewActivity">
 
+        </activity>
+        <activity android:name=".view.activity.RecordActivity"></activity>
     </application>
 
 </manifest>
