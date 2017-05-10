@@ -2,15 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cnh.bluetooth">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
 
     <application
         android:name=".BlueApplication"
@@ -19,23 +18,27 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"><intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity">
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+        </activity>
         <activity android:name=".view.SplashActivity" />
         <activity android:name=".view.activity.LoginActivity" />
         <activity android:name=".view.activity.GoodsActivity" />
         <activity android:name=".view.activity.NotificationActivity" />
         <activity android:name=".view.activity.PhotoActivity" />
         <activity android:name=".view.activity.PickerViewActivity" />
-        、
-        <activity android:name=".view.activity.PullToZoomListViewActivity" />
-        <activity android:name=".view.activity.FadingScrollViewActivity">
 
-        </activity>
-        <activity android:name=".view.activity.RecordActivity"></activity>
+        <service android:name=".utils.BluetoothLeService" />
+
+        <activity android:name=".view.activity.PullToZoomListViewActivity" />
+        <activity android:name=".view.activity.FadingScrollViewActivity" />
+        <activity android:name=".view.activity.RecordActivity" />
+        <activity android:name=".view.activity.DeviceControlActivity" />
+        <activity android:name=".view.activity.DeviceScanActivity"> <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>
