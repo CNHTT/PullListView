@@ -14,7 +14,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -57,7 +56,9 @@ public class DeviceScanActivity extends AppCompatActivity {
             }
         }
         mHandler = new Handler();
-
+        // Initializes list view adapter.
+        mLeDeviceListAdapter = new LeDeviceListAdapter();
+        listView.setAdapter(mLeDeviceListAdapter);
         // 检查当前手机是否支持ble 蓝牙,如果不支持退出程序
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Toast.makeText(this, R.string.ble_not_supported, Toast.LENGTH_SHORT).show();
@@ -119,9 +120,7 @@ public class DeviceScanActivity extends AppCompatActivity {
             }
         }
 
-        // Initializes list view adapter.
-        mLeDeviceListAdapter = new LeDeviceListAdapter();
-        listView.setAdapter(mLeDeviceListAdapter);
+
         scanLeDevice(true);
     }
 
@@ -180,10 +179,10 @@ public class DeviceScanActivity extends AppCompatActivity {
                     Log.d(TAG, "run: "+struuid);
                     String name =  device.getName();
                     Log.d(TAG, "run:sring "+name);
-                    if(!TextUtils.isEmpty(name) && "CardioChek Meter:".contains(name)) {
+//                    if(!TextUtils.isEmpty(name) && "CardioChek Meter:".contains(name)) {
                         mLeDeviceListAdapter.addDevice(device);
                         mLeDeviceListAdapter.notifyDataSetChanged();
-                    }
+//                    }
                 }
             });
         }
